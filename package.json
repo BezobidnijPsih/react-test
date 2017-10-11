@@ -17,13 +17,12 @@
     "prettier": "^1.7.4"
   },
   "scripts": {
+    "precommit": "npm run lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js src"
   },
-  "pre-commit": [
-    "lint"
-  ]
+  "pre-commit": ["lint"]
 }

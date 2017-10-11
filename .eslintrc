@@ -1,27 +1,31 @@
 {
-    "extends": [
-        "prettier",
-        "prettier/react"
-    ],
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "plugins": [
-        "eslint-plugin-prettier"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "globals": {
-        "window": true,
-        "document": true
-    },
-    "rules": {
-        "prettier/prettier": "error"
+  "extends": ["prettier", "prettier/react"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["eslint-plugin-prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": false,
+        "jsxBracketSameLine": true,
+        "parser": "flow"
+      }
+    ]
+  }
 }
