@@ -6,8 +6,11 @@
     "fetch": "^1.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
-    "rebass": "^1.0.4"
+    "rebass": "^1.0.4",
+    "superagent": "^3.6.3"
   },
   "devDependencies": {
     "eslint": "^4.8.0",
@@ -25,7 +28,5 @@
     "eject": "react-scripts eject",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js src"
   },
-  "pre-commit": [
-    "lint"
-  ]
+  "pre-commit": ["lint"]
 }
