@@ -32,6 +32,7 @@ class NavSidebar extends Component {
             .filter(route => route.mainMenuLabel)
             .map(route => (
               <Anchor
+                key={route.key}
                 tag={Link}
                 to={route.path}
                 children={route.mainMenuLabel}

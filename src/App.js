@@ -23,10 +23,21 @@ class App extends Component {
             <Switch>
               {routes.map(route => {
                 if (route.path === '/') {
-                  return <Route exact path="/" component={route.component} />;
+                  return (
+                    <Route
+                      exact
+                      path="/"
+                      component={route.component}
+                      key={route.key}
+                    />
+                  );
                 } else {
                   return (
-                    <Route path={route.path} component={route.component} />
+                    <Route
+                      path={route.path}
+                      component={route.component}
+                      key={route.key}
+                    />
                   );
                 }
               })}
