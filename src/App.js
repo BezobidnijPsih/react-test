@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
+import {routes} from './Routes';
 import {Switch, Route} from 'react-router-dom';
+
+import styled from 'styled-components';
+import 'grommet-css';
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
-import NavSidebar from './components/NavSidebar';
-import 'grommet-css';
-import styled from 'styled-components';
 import AppUI from 'grommet/components/App';
-import {routes} from './Routes';
+
+import NavSidebar from './components/NavSidebar';
+
 class App extends Component {
   render() {
     const Container = styled(Box)`
@@ -18,7 +21,7 @@ class App extends Component {
           <Split flex="right">
             <NavSidebar />
             <Switch>
-              {routes.map((route, index) => {
+              {routes.map(route => {
                 if (route.path === '/') {
                   return <Route exact path="/" component={route.component} />;
                 } else {

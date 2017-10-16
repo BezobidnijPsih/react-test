@@ -10,6 +10,8 @@ import Button from 'grommet/components/Button';
 import Anchor from 'grommet/components/Anchor';
 import CloseIcon from 'grommet/components/icons/base/Close';
 
+import {routes} from './../Routes';
+
 class NavSidebar extends Component {
   render() {
     const MenuContainer = styled(Sidebar)`
@@ -26,12 +28,15 @@ class NavSidebar extends Component {
           <Button icon={<CloseIcon />} plain={true} a11yTitle="Close Menu" />
         </Header>
         <Menu fill={true} primary={true}>
-          <Anchor tag={Link} to={`/detail`}>
-            Detail
-          </Anchor>
-          <Anchor tag={Link} to={`/`}>
-            List
-          </Anchor>
+          {routes
+            .filter(route => route.mainMenuLabel)
+            .map(route => (
+              <Anchor
+                tag={Link}
+                to={route.path}
+                children={route.mainMenuLabel}
+              />
+            ))}
         </Menu>
       </MenuContainer>
     );
