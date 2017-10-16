@@ -1,27 +1,36 @@
 import React, {Component} from 'react';
-import {Provider, Heading, NavLink} from 'rebass';
-import List from './pages/List';
-import Detail from './pages/Detail';
 import {Switch, Route} from 'react-router-dom';
-import {Link} from 'react-router-dom';
-
+import Split from 'grommet/components/Split';
+import Box from 'grommet/components/Box';
+import NavSidebar from './components/NavSidebar';
+import 'grommet-css';
+import styled from 'styled-components';
+import AppUI from 'grommet/components/App';
+import {routes} from './Routes';
 class App extends Component {
   render() {
+    const Container = styled(Box)`
+      background: #2b3e50;
+    `;
     return (
-      <Provider>
-        <Heading>
-          <NavLink is={Link} to={`/detail`}>
-            Detail
-          </NavLink>
-          <NavLink is={Link} to={`/`}>
-            List
-          </NavLink>
-        </Heading>
-        <Switch>
-          <Route exact path="/" component={List} />
-          <Route path="/detail" component={Detail} />
-        </Switch>
-      </Provider>
+      <AppUI centered={false}>
+        <Container full={true}>
+          <Split flex="right">
+            <NavSidebar />
+            <Switch>
+              {routes.map((route, index) => {
+                if (route.path === '/') {
+                  return <Route exact path="/" component={route.component} />;
+                } else {
+                  return (
+                    <Route path={route.path} component={route.component} />
+                  );
+                }
+              })}
+            </Switch>
+          </Split>
+        </Container>
+      </AppUI>
     );
   }
 }

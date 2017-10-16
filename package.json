@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "fetch": "^1.1.0",
+    "grommet-css": "^1.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
@@ -28,5 +29,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js src"
   },
-  "pre-commit": ["lint"]
+  "pre-commit": [
+    "lint"
+  ]
 }
