@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 import styled from 'styled-components';
 import Sidebar from 'grommet/components/Sidebar';
@@ -33,9 +32,8 @@ class NavSidebar extends Component {
             .map(route => (
               <Anchor
                 key={route.key}
-                tag={Link}
-                to={route.path}
-                children={route.mainMenuLabel}
+                label={route.mainMenuLabel}
+                path={route.path}
               />
             ))}
         </Menu>
