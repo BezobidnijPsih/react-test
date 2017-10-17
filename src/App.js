@@ -6,45 +6,49 @@ import styled from 'styled-components';
 import 'grommet-css';
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
-import AppUI from 'grommet/components/App';
+import GrommetApp from 'grommet/components/App';
 
 import NavSidebar from './components/NavSidebar';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
     const Container = styled(Box)`
-      background: #2b3e50;
+      background: #2b3e50 !important;
     `;
     return (
-      <AppUI centered={false}>
-        <Container full={true}>
-          <Split flex="right">
-            <NavSidebar />
-            <Switch>
-              {routes.map(route => {
-                if (route.path === '/') {
-                  return (
-                    <Route
-                      exact
-                      path="/"
-                      component={route.component}
-                      key={route.key}
-                    />
-                  );
-                } else {
-                  return (
-                    <Route
-                      path={route.path}
-                      component={route.component}
-                      key={route.key}
-                    />
-                  );
-                }
-              })}
-            </Switch>
-          </Split>
+      <GrommetApp centered={false}>
+        <Container full={true} colorIndex="grey-2">
+          <Header />
+          <Box pad={{horizontal: 'none', vertical: 'medium'}}>
+            <Split flex="right">
+              <NavSidebar />
+              <Switch>
+                {routes.map(route => {
+                  if (route.path === '/') {
+                    return (
+                      <Route
+                        exact
+                        path="/"
+                        component={route.component}
+                        key={route.key}
+                      />
+                    );
+                  } else {
+                    return (
+                      <Route
+                        path={route.path}
+                        component={route.component}
+                        key={route.key}
+                      />
+                    );
+                  }
+                })}
+              </Switch>
+            </Split>
+          </Box>
         </Container>
-      </AppUI>
+      </GrommetApp>
     );
   }
 }
