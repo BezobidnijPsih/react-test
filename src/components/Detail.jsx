@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import ajax from 'superagent';
-import {Button, Panel, PanelHeader, Row, Col} from 'react-bootstrap';
+import {Button, Panel, Row, Col} from 'react-bootstrap';
 
 class Detail extends React.Component {
   buttonClicked() {
