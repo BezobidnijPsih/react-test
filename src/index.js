@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import List from './pages/List';
-// import Detail from './pages/Detail';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter} from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 ReactDOM.render(
   <BrowserRouter>
