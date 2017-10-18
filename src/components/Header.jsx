@@ -1,12 +1,10 @@
 import React from 'react';
 import {
   Navbar,
-  Nav,
   FormGroup,
   FormControl,
   Glyphicon,
   Button,
-  NavDropdown,
   MenuItem,
   Dropdown,
 } from 'react-bootstrap';
@@ -16,9 +14,7 @@ class Header extends React.Component {
     return (
       <Navbar inverse staticTop>
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#">Brand</a>
-          </Navbar.Brand>
+          <Navbar.Brand>Brand</Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
