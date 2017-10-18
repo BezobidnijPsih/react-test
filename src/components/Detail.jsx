@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import ajax from 'superagent';
-import {Button, Container, Panel, PanelHeader, Row, Column} from 'rebass';
+import {Button, Panel, PanelHeader, Row, Col} from 'react-bootstrap';
 
 class Detail extends React.Component {
   buttonClicked() {
@@ -14,35 +14,30 @@ class Detail extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          {this.renderPanels()}
-          {this.renderButtons()}
-        </Row>
-      </Container>
+      <Row>
+        {this.renderPanels()}
+        {this.renderButtons()}
+      </Row>
     );
   }
 
   renderButtons() {
     return (
-      <Column width={1 / 2}>
+      <Col sm={1}>
         <Button onClick={this.buttonClicked}>Click me</Button>
-      </Column>
+      </Col>
     );
   }
 
   renderPanels() {
     return (
-      <Column width={1 / 2}>
+      <Col sm={11}>
         {this.state.commits.map((commit, index) => (
-          <Panel key={index} color="blue" mt={10}>
-            <PanelHeader bg="blue" color="white">
-              {commit.author.login}
-            </PanelHeader>:
+          <Panel key={index} header={commit.author.login} bsStyle="primary">
             <a href={commit.html_url}>{commit.commit.message}</a>
           </Panel>
         ))}
-      </Column>
+      </Col>
     );
   }
 
