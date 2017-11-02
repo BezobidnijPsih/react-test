@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
-import {routes} from './../Routes';
+import {routes} from './Routes';
 
 export class Content extends Component {
   render() {

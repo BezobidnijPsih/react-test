@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
-import {routes} from './../Routes';
+import {routes} from './Routes';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
