@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 import {routes} from '../app/Routes';
-import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import {LinkContainer} from 'react-router-bootstrap';
 
 class Menu extends Component {
   render() {
-    const MenuLink = styled(Link)`
-      &:hover {
-        text-decoration: none;
-      }
-    `;
     return (
       <ListGroup>
         {routes.filter(route => route.mainMenuLabel).map(route => (
-          <ListGroupItem key={route.key}>
-            <MenuLink to={route.path}>{route.mainMenuLabel}</MenuLink>
-          </ListGroupItem>
+          <LinkContainer
+            exact
+            to={route.path}
+            key={route.key}
+            className="list-group-item">
+            <a>{route.mainMenuLabel}</a>
+          </LinkContainer>
         ))}
       </ListGroup>
     );
