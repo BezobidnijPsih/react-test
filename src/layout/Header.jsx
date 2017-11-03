@@ -7,16 +7,21 @@ import {
   Button,
   MenuItem,
   Dropdown,
+  Row,
+  Col,
 } from 'react-bootstrap';
 
 class Header extends React.Component {
   render() {
     return (
-      <Navbar inverse staticTop>
-        <Navbar.Header>
-          <Navbar.Brand>Brand</Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
+      <Navbar staticTop>
+        <Col md={3}>
+          <Navbar.Header>
+            <Navbar.Brand>Brand</Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+        </Col>
+
         <Navbar.Collapse>
           <Navbar.Form pullLeft>
             <FormGroup>
@@ -27,7 +32,7 @@ class Header extends React.Component {
           <Navbar.Form pullRight>
             <Dropdown id="basic-nav-dropdown">
               <Dropdown.Toggle>
-                <Glyphicon glyph="user" /> User
+                <Glyphicon glyph="user" /> Admin
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <MenuItem eventKey={1}>Profile</MenuItem>
