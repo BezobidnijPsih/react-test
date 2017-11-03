@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render correctly 1`] = `
+<ListGroup
+  bsClass="list-group"
+>
+  <ListGroupItem
+    bsClass="list-group-item"
+    key="cars"
+    listItem={false}
+  >
+    <Styled(Link)
+      to="/"
+    >
+      Cars
+    </Styled(Link)>
+  </ListGroupItem>
+  <ListGroupItem
+    bsClass="list-group-item"
+    key="races"
+    listItem={false}
+  >
+    <Styled(Link)
+      to="/races"
+    >
+      Races
+    </Styled(Link)>
+  </ListGroupItem>
+  <ListGroupItem
+    bsClass="list-group-item"
+    key="tracks"
+    listItem={false}
+  >
+    <Styled(Link)
+      to="/tracks"
+    >
+      Tracks
+    </Styled(Link)>
+  </ListGroupItem>
+  <ListGroupItem
+    bsClass="list-group-item"
+    key="users"
+    listItem={false}
+  >
+    <Styled(Link)
+      to="/users"
+    >
+      Users
+    </Styled(Link)>
+  </ListGroupItem>
+</ListGroup>
+`;

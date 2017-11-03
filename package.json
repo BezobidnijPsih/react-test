@@ -15,6 +15,9 @@
     "superagent": "^3.6.3"
   },
   "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.3",
+    "enzyme-to-json": "^3.1.4",
     "eslint": "^4.8.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
@@ -25,14 +28,14 @@
     "prettier": "^1.7.4",
     "prettier-eslint": "^8.2.1",
     "prettier-eslint-cli": "^4.4.0",
-    "raf": "^3.4.0",
-    "react-addons-test-utils": "^15.6.2"
+    "raf": "^3.4.0"
   },
   "scripts": {
     "precommit": "npm run lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage",
+    "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=./src/app/setupTests.js",
+    "test-c": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=./src/app/setupTests.js --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js src"
   },

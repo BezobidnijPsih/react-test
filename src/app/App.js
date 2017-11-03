@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Header from './Header';
-import Menu from './Menu';
-import Content from './Content';
+import Header from '../layout/Header';
+import Menu from '../layout/Menu';
+import Content from '../layout/Content';
 import {Row, Col, Grid} from 'react-bootstrap';
 import {BrowserRouter} from 'react-router-dom';
 
