@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import {ListGroup} from 'react-bootstrap';
 import {routes} from '../app/Routes';
-import styled from 'styled-components';
 import {LinkContainer} from 'react-router-bootstrap';
 
 class Menu extends Component {
